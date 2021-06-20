@@ -4,7 +4,7 @@ from django.http.request import QueryDict
 import os
 import json
 import base64
-import re
+import six
 ENV_PROFILE = os.getenv("ENV")
 if ENV_PROFILE == "pro":
     from NetOpsWebShell import pro_settings as config
@@ -67,11 +67,11 @@ class WebSSH(WebsocketConsumer):
         }
 
         if auth == 'key':
-            ssh_key_file = os.path.join(TMP_DIR, ssh_key_name)
+            ssh_key_file = os.path.join(config.TMP_DIR, ssh_key_name)
             with open(ssh_key_file, 'r') as f:
                 ssh_key = f.read()
 
-            string_io = StringIO()
+            string_io =six.StringIO()
             string_io.write(ssh_key)
             string_io.flush()
             string_io.seek(0)
