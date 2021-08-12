@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from app import views
 urlpatterns = [
+    path('', views.index),
     path('opswebshell/admin/', admin.site.urls),
     path('opswebshell/app/', include('app.urls')),
 

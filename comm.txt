@@ -172,10 +172,6 @@ git push -u origin main
 
 scp -P 22 /Users/congxingwang/pythoncode/weboffice root@106.54.5.14:/project
 
-ssh root@106.54.5.14 -p 22
-
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'45.79.114.57' IDENTIFIED BY 'P@sswszyfd0rd' WITH GRANT OPTION;
-flush privileges;
 
 
 

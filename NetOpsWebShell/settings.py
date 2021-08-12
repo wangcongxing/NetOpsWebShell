@@ -131,7 +131,7 @@ DATABASES = {
         'NAME': 'NetOpsWebShell',
         'USER': 'root',
         'PASSWORD': '123456'
-    }, 'smartoffice': {
+    }, 'NetOpsBase': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
         'PORT': '3306',
@@ -140,7 +140,7 @@ DATABASES = {
         'PASSWORD': '123456'
     }
 }
-DATABASE_ROUTERS = ['opsWebShell.database_router.DatabaseAppsRouter']  # 数据库路由
+DATABASE_ROUTERS = ['NetOpsWebShell.database_router.DatabaseAppsRouter']  # 数据库路由
 DATABASE_APPS_MAPPING = {
     'admin': 'NetOpsBase',
     'auth': 'NetOpsBase',
